@@ -21,7 +21,7 @@ func main() {
 
 	apiKey := os.Getenv("API")
 	url := "https://api.openai.com/v1/engines/davinci/completions"
-	prompt := "Сколько время в Winnipeg"
+	prompt := "да"
 	maxTokens := 60
 	temperature := 0.5
 	stop := []string{"You:"}
