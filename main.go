@@ -21,16 +21,18 @@ func main() {
 
 	apiKey := os.Getenv("API")
 	url := "https://api.openai.com/v1/engines/davinci/completions"
-	prompt := "да"
-	maxTokens := 60
-	temperature := 0.5
+	prompt := "how old you"
+	maxTokens := 260
+	temperature := 1
 	stop := []string{"You:"}
 
 	payload := map[string]interface{}{
+		// "model":       "code-davinci-002",
 		"prompt":      prompt,
 		"max_tokens":  maxTokens,
 		"temperature": temperature,
 		"stop":        stop,
+		// "top":         1.0,
 	}
 
 	payloadJSON, _ := json.Marshal(payload)
